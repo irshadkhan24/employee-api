@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://employee-frontend-beta.vercel.app",
+    origin: "https://employee-frontend-etdv.vercel.app",
     credentials: true,
   })
 );
