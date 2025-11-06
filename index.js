@@ -1,5 +1,8 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
+import connectToDatabase from "./db/db.js";
+
 import authRouter from "./routes/auth.js";
 import departmentRouter from "./routes/department.js";
 import employeeRouter from "./routes/employee.js";
@@ -8,8 +11,8 @@ import leaveRouter from "./routes/leave.js";
 import settingRouter from "./routes/setting.js";
 import attendanceRouter from "./routes/attendance.js";
 import dashboardRouter from "./routes/dashboard.js";
-import connectToDatabase from "./db/db.js";
 
+dotenv.config();  // Load .env file first
 connectToDatabase();
 
 const app = express();
