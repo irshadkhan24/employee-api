@@ -12,8 +12,9 @@ import settingRouter from "./routes/setting.js";
 import attendanceRouter from "./routes/attendance.js";
 import dashboardRouter from "./routes/dashboard.js";
 
-dotenv.config();  // Load .env file first
-connectToDatabase();
+dotenv.config();
+
+await connectToDatabase();
 
 const app = express();
 
@@ -42,5 +43,4 @@ app.get("/", (req, res) => {
   res.send("Employee Management System API is running successfully 🚀");
 });
 
-// Export app for Vercel
 export default app;
